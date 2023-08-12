@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.driver;
 
 public class Car extends Vehicle {
@@ -10,7 +15,6 @@ public class Car extends Vehicle {
     private int seats;
 
     public Car(String name, int wheels, int doors, int gears, boolean isManual, String type, int seats) {
-        //Hint: Car extends Vehicle
         super(name);
         this.wheels = wheels;
         this.doors = doors;
@@ -22,12 +26,12 @@ public class Car extends Vehicle {
     }
 
     public void changeGear(int newGear) {
-        currentGear = newGear;
-        System.out.println("changeGear method called - The gear is changed to: " + currentGear);
+        this.currentGear = newGear;
+        System.out.println("changeGear method called - The gear is changed to: " + this.currentGear);
     }
 
     public void changeSpeed(int newSpeed, int newDirection) {
-        move(newSpeed, newDirection);
+        this.move(newSpeed, newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
 

@@ -1,33 +1,37 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.driver;
 
 public class F1 extends Car {
-
     public F1(String name, boolean isManual) {
         super(name, 4, 2, 7, isManual, "Racing", 1);
     }
 
     public void accelerate(int rate) {
-        int newSpeed = getCurrentSpeed() + rate;
-
+        int newSpeed = this.getCurrentSpeed() + rate;
         if (newSpeed <= 0) {
-            stop();
-            changeGear(1);
+            this.stop();
+            this.changeGear(1);
         } else if (newSpeed <= 50) {
-            changeGear(1);
+            this.changeGear(1);
         } else if (newSpeed <= 100) {
-            changeGear(2);
+            this.changeGear(2);
         } else if (newSpeed <= 150) {
-            changeGear(3);
+            this.changeGear(3);
         } else if (newSpeed <= 200) {
-            changeGear(4);
+            this.changeGear(4);
         } else if (newSpeed <= 250) {
-            changeGear(5);
+            this.changeGear(5);
         } else {
-            changeGear(6);
+            this.changeGear(6);
         }
 
         if (newSpeed > 0) {
-            changeSpeed(newSpeed, getCurrentDirection());
+            this.changeSpeed(newSpeed, this.getCurrentDirection());
         }
+
     }
 }
